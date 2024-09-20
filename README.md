@@ -115,10 +115,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - a href gebruiken inplaats van buttons
+  - mag span gebruiken voor dingen
+  - geen br tag gebruiken
+  - h1 toevoegen, alleen zichtbaar maken voor screenreader
 
 </details>
 
@@ -132,7 +132,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ben nu goed bezig met de basics van de site. Mijn html is zowel compleet behalve de navigatie in de header (uiteraard ook met 
+  javascript) en de invulvelden van mijn tweede pagina. Ik ga mij eerst focusen op dat afmaken en zorgen dat dat er netjes en compleet    
+  uitziet (wat voor mij al best een uitdaging is). Daarna ga ik de navigatie maken en kijken als ik tijd heb om de reservering pop-up
+  erbij te maken. Dat is voor mij dan de het extratje wat ik toevoeg aan de site. Als dat makkelijker gaat dan verwacht kan ik nog nadenken
+  om een muziek element toe te voegen. Ik ga zelf af en toe naar deze club en ben erg fan van de muziek dus lijkt het mij wel leuk
+  om dat element dan toe te voegen op een originele manier. Maar zoals eerder gezegd is uberhaupt de site fatsoenlijk namaken al een 
+  hele uitdaging voor mij, dus ik moet kijken of ik daar tijd voor ga hebben.
 
 
   ### Agenda voor meeting
@@ -243,5 +249,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   1. Klasgenoten
   2. Chatgpt (voor kleine dingen alleen)
   3. Studentassistente
+<img src="readme-images/fedscreenshot.png" width="375px" alt="screenshot h1 verstoppen">
+<img src="readme-images/fedscreenshot2.png" width="375px" alt="code correcties">
 
 </details>
