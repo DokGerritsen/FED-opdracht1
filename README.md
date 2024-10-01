@@ -154,10 +154,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - geluidoptie toevoegen aan video
+  - has() gebruiken voor light- en darkmode (werkgroep 7) 
+  - hamburgermenu bij voortgang 1 
+  - prefers-reduced-motion is dat er geen automatische animaties/bewegingen zijn (me video een stilstaand beeld bvb.)
+  - custom properties zijn variabelen
+  - openingstijden van week als list maken (voorbeeld david)
+  - ptjes in footer met span doen (voorbeeld david)
+  - root aanpassen met variabele kleuren
 
 </details>
 
@@ -247,7 +251,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. Vermeld de bronnen ook in je code.
 
   1. Klasgenoten
-  2. Chatgpt (voor kleine dingen alleen)
+  2. Chatgpt
   3. Studentassistente
 <img src="readme-images/fedscreenshot.png" width="375px" alt="screenshot h1 verstoppen">
 <img src="readme-images/fedscreenshot2.png" width="375px" alt="code correcties">

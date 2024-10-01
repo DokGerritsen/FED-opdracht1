@@ -8,13 +8,58 @@
 </head>
 <body>
     <header>
-		<img src="readme-images/fedbretlogo.png" alt="Bret logo">
+		<a href="index.html">
+			<img src="readme-images/fedbretlogo.png" alt="Bret logo">
+		</a>
+		<button id="hamburger">
+			&#9776; <!-- Hamburger icon (3 horizontal lines) -->
+		</button>
+		<nav class="nav-menu" id="nav-menu">
+			<a href="reservations.html">Reservations</a>
+			<a href="menu.html">Menu</a>
+			<a href="agenda.html">Agenda</a>
+			<a href="ticketshop.html">Ticketshop</a>
+		</nav>
 	</header>
 
     <main>
-        <h2>GROUP RESERVATIONS</h2>
-        <p>Welcome to BRET! We are happy to organize your group outing with friends, family, or colleagues. To ensure that the day goes as expected, we kindly ask you to fill in this form. This way we make sure that your day is taken care of down to the last detail</p>
-        <img src="readme-images/fedblackimage.jpeg" alt="achtergrond">
+        <h1 class="visually-hidden">Reservations</h1>
+        <section class="reservering">
+            <h2>GROUP RESERVATIONS</h2>
+            <p><span>Welcome to BRET!</span> We are happy to organize your group outing with friends, family, or colleagues. To ensure that the day goes as expected, we kindly ask you to fill in this form. This way we make sure that your day is taken care of down to the last detail</p>
+            
+            <form novalidate>
+                <fieldset>
+                    <label for="name">Name (First & Last)</label>
+                    <input type="text" id="name" required placeholder="">
+        
+                    <label for="email">Email adress</label>
+                    <input type="email" id="email" required placeholder="">
+        
+                    <label for="phone">Phone number</label>
+                    <input type="text" id="phone" required placeholder="">
+        
+                    <label for="reservation">When would you like to make a reservation? (Date & Time)</label>
+                    <input type="text" id="reservation" required placeholder="">
+        
+                    <label for="reason">What is the reason of your visit?</label>
+                    <input type="text" id="reason" required placeholder="">
+        
+                    <label for="groupSize">What is the group size?</label>
+                    <input type="text" id="groupSize" required placeholder="">
+        
+                    <label for="dinnerType">Would you like to have dinner or drinks and snacks?</label>
+                    <input type="text" id="dinnerType" required placeholder="">
+                </fieldset>
+
+                <button type="submit"> SEND THIS FORM</button>
+            </form>
+            
+            
+
+        </section>
+
+    
     </main>
 
     <footer>
@@ -28,12 +73,19 @@
 		<p>SUN: Club Service / Closed</p>
 		<p>Check our club agenda for our upcoming events</p>
 		<p>For group reservations opening hours might be flexible, please contact us to inquire</p>
+
 		<h4>BRET AMSTERDAM B.V.</h4>
+
 		<p>KVK: 67652573 . VAT: NL857111176B01 .</p>
 		<p>IBAN: NL06 TRIO 0197 9891 52</p>
 		<p>Orlyplein 76, 1043 DP Amstrdam, Netherlands</p>
 		<p>Tel: +31 85 060 0060</p>
-		<p>Disclaimer  Lost & Found  C2023 by BRET Amsterdam House Rules club / restaurant & Doorpolicy</p>
+		<ul>
+            <li>Disclaimer</li>
+            <li>Lost & Found</li>
+            <li>C2023 by BRET AMSTERDAM</li>
+            <li>House Rules club / restaurant & Doorpolicy</li>
+        </ul>
 	</footer>
 
 	<script defer src="scripts/script.js"></script>
