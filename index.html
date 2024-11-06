@@ -18,9 +18,11 @@
 		<a href="index.html">
 			<img src="readme-images/fedbretlogo.png" alt="Bret logo">
 		</a>
-		<button id="hamburger">
+
+		<button id="hamburger" aria-label="Hamburgermenu">
 			&#9776; <!-- Hamburger icon (3 horizontal lines) -->
 		</button>
+
 		<nav class="nav-menu" id="nav-menu">
 			<a href="reservations.html">Reservations</a>
 			<a href="menu.html">Menu</a>
@@ -32,11 +34,13 @@
 
 	<main>
 		<h1 class="visually-hidden">Bret</h1>
+
+		
 		<section>
 			<article>
 				<h2>RESTAURANT & BAR</h2>
 
-				<p>We focus on organic,local, and sustainable products on our meun and offer a wide selection of craft
+				<p>We focus on organic,local, and sustainable products on our menu and offer a wide selection of craft
 					beers</p>
 				
 				<a href="reservations.html" class="button">Reservations</a>
@@ -48,13 +52,12 @@
 
 		<section class="club">
 			<article>
-				<video autoplay loop muted playsinline>
+				<video id="clubVideo" autoplay loop muted playsinline>
 					<source src="video/fedbretvideo.mp4" type="video/mp4">
 					Je browser ondersteunt deze video niet
 				</video>
 
 				<h2>NIGHTCLUB</h2>
-
 				<p>We focus on a balance in different electronic music genres for like-minded clubbers to make new
 					memories with</p>
 
@@ -62,13 +65,15 @@
 				<a href="ticketshop.html" class="button">Ticketshop</a>
 				<a href="https://t.me/your-telegram-link" class="button">Join our telegram</a>
 				<a href="lostfound.html" class="button">Lost & Found</a>
+				
+				<button id="PausePlayButton" > Pause Video</button>
 					
 			</article>
 		</section>
 	</main>
 
 	<footer>
-		<h3>OPENING HOURS</h3>
+		<h2>OPENING HOURS</h2>
 		<p>MON: closed</p>
 		<p>TUE: 12:00-21:00 (drinks only)</p>
 		<p>WED: 12:00-21:00 (dinner and bites)</p>
