@@ -175,7 +175,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Algemene werking: De VoiceOver werkt goed en leest alle elementen van mijn site netjes voor. De alt-tags zorgen ervoor dat de afbeeldingen correct worden omschreven.
+
+  Navigatie: Het gebruik van de VoiceOver is voor mij nog wennen, waardoor ik het lastig vind om door mijn site te navigeren. Hier kan ik in de toekomst meer mee oefenen om beter te worden in het gebruik.
+
+  Hamburgermenu: Mijn hamburgermenu mist een alt-tag, wat zorgt voor verwarring bij de screenreader. Dit maakt het menu niet toegankelijk, omdat gebruikers niet begrijpen wat het is. Ik moet hier een duidelijke alt-tag aan toevoegen. Blijkbaar werkt een alt tag alleen op afbeeldingen en dus niet op dit hamburgermenu. Ik heb de alt tag vervangen voor een aria-label.
+
+  Verplichte velden: De screenreader geeft goed aan welke inputvelden in mijn formulier verplicht zijn. Dit is nuttig voor gebruikers die kleuren moeilijk kunnen zien, omdat ze dan weten wat ze moeten invullen.
+
+  Onzichtbare H1: Mijn onzichtbare H1 werkt goed; het eerste dat je hoort is dat je op de site van Bret bent. Dit geeft een goede context aan gebruikers van de screenreader.
+
+  Algehele toegankelijkheid: Over het algemeen functioneert de screenreader goed, en het geeft me een duidelijk idee van waar mijn site over gaat, zelfs als ik mijn ogen sluit.
 
 </details>
 
@@ -203,12 +213,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  Ik was helaas niet bij deze meeting aangezien ik ziek was.
 
 </details>
 
@@ -220,6 +225,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken voor eindgesprek</summary>
+  Mijn site was simpelweg niet af. wat ik tot nu toe had was wel goed maar ik heb nog niet voldaan aan de eisen van de opdracht. 
+  Er moet meer diepgang in mijn site, het moet completer. Bijvoorbeeld animaties toevoegen. Ook moet ik meer letten op de toegankelijkheid. 
+  Light/dark mode toevoegen via media queries. Optie toevoegen dat mijn video op pauze kan/een stille afbeelding wordt.
 
   ### Je uitkomst - karakteristiek screenshots:
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
@@ -252,7 +260,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   1. Klasgenoten
   2. Chatgpt
-  3. Studentassistente
+  - gebruikt voor het maken van de pauzeerknop ('maak voor html/css een button waarmee ik een video op pauze kan zetten')
+  - gebruikt voor het maken van het hamburgermenu ('zorg dat alle benodigede javascript goed staat in het volgende document wat betrekking   heeft tot het kunnen open en dichtklappen van mijn hamburgermenu')
+  - gebruikt voor het maken van de dark/light mode ('maak voor html/css een button waarmee ik een video op pauze kan zetten')
+  - gebruikt voor het uitleggen van stukjes code ('leg dit stuk code aan mij uit')
+  3. Studentassistente (verstopte H1, algemene code correctie)
 <img src="readme-images/fedscreenshot.png" width="375px" alt="screenshot h1 verstoppen">
 <img src="readme-images/fedscreenshot2.png" width="375px" alt="code correcties">
 

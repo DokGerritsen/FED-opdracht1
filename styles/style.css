@@ -16,18 +16,24 @@
 	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	--color-text1: white;
 	--color-text2: rgb(197, 5, 5);
+	--color-text3: black;
 	--color-background: black;
-	--color-background2: white; 
+	--color-background2: rgb(235, 235, 235); 
+	--color-background3: lightgrey;
 	--color-button1: green;
 	--color-button2: rgb(127, 127, 127);
+
 	
 }
-
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
+
+section {
+	background-color: black;
+}
 
 
 /*van studentassistente gekregen*/
@@ -39,11 +45,6 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
-}
-
-
-main {
-	background-color:var(--color-background);
 }
 
 
@@ -121,7 +122,6 @@ header img {
 
 
 /* Section 1 */
-
 section:nth-of-type(1) article {
 	position: absolute;
 	width: 100%;
@@ -239,6 +239,23 @@ section:nth-of-type(1) img {
 	object-fit: cover;
 }
 
+.club button {
+	background-color: transparent;
+	color: white;
+	font-size: 0.6em;
+	border: 1px solid white;
+	margin: 1em;
+	padding: 1em;
+	border-radius: 3em;
+	position: absolute;
+	top: 90%;
+}
+
+.club button:hover {
+	background-color: white;
+	color: black;
+}
+
 
 
 /* footer */
@@ -249,7 +266,7 @@ footer {
 	font-family:Arial, Helvetica, sans-serif;	
 }
 
-footer h3 {
+footer h2 {
 	padding-top: 2em;
 	padding-bottom: 1em;
 }
@@ -292,6 +309,10 @@ footer h4 {
 
 
 /* tweede page */
+.reservering {
+    padding-bottom: 2em; 
+}
+
 .reservering h2 {
 	font-size: 3em;
 	padding-top: 5em;
@@ -331,35 +352,102 @@ input[type="email"] {
     margin-bottom: 1em;
     font-size: 1em;
     border: none;
-    background-color: rgb(127, 127, 127); /* Standaard grijs */
-    color: var(--color-text1);
-	transition: background-color 0.3s ease, color 0.3s ease; /* Gladde overgang bij kleurverandering */
+    background-color: var(--color-background2);
+    color: var(--color-text3);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Achtergrondkleur bij focus */
+/* Focustijl */
 input[type="text"]:focus,
 input[type="email"]:focus {
     background-color: var(--color-background2);
-    outline: none; /* Geen outline bij focus */
-}
-
-/* Rood achtergrondkleur bij verlies van focus en leeg veld */
-input:invalid:focus-visible {
-    background-color: var(--color-text2);
+    outline: none;
 }
 
 /* Voor de knop */
 form button {
     display: block; 
     width: 18em; 
-	height: 4em;
-    margin: 1em auto; 
-    padding: 1em; 
+    height: 4em;
+    margin-left: 5em;
+    margin-right: 5em;
     background-color: var(--color-button1);
-    color: white; 
+    color: var(--color-text1); 
     border: none; 
     border-radius: 2em; 
     font-size: 1em; 
     cursor: pointer; 
 }
+
+
+/* Stijlen voor lichte modus */
+#lightmode-toggle {
+	position: absolute;
+	top: 22%;
+	left: 2%;
+	cursor: pointer;
+	text-decoration: underline;
+	background-color: transparent;
+	border: none;
+	color: var(--color-text1);
+
+}
+
+.light-mode #lightmode-toggle {
+    background-color: var(--color-background2); /* Achtergrondkleur voor lichte modus */
+    color: black; /* Tekstkleur voor lichte modus */
+}
+
+.light-mode section {
+    background-color: var(--color-background2); /* Achtergrondkleur voor secties in lichte modus */
+    color: var(--color-text3) /* Tekstkleur voor elementen binnen de sectie in lichte modus */
+}
+
+.light-mode section p, 
+.light-mode section h1, 
+.light-mode section h2, 
+.light-mode section h3, 
+.light-mode section a, 
+.light-mode section label, 
+.light-mode section input, 
+.light-mode section form,
+.light-mode section button a {
+    color: var(--color-text3) /* Algemene tekstkleur voor andere elementen binnen de sectie in lichte modus */
+}
+
+.light-mode input {
+    color: var(--color-text3); /* Tekstkleur voor invoervelden in lichte modus */
+    background-color: var(--color-background3); /* Achtergrondkleur voor invoervelden in light mode */
+}
+
+
+
+/* Light Mode */
+@media (prefers-color-scheme:light) {
+    body {
+        background-color: rgb(225, 225, 225); /* Achtergrondkleur voor light mode */
+        color: black; /* Tekstkleur voor light mode */
+    }
+
+    section {
+        background-color: rgb(225, 225, 225); /* Achtergrondkleur voor light mode */
+    }
+
+    p, h1, h2, h3, a, label {
+        color: black; /* Tekstkleur voor light mode */
+    }
+
+    input {
+        background-color: lightgrey; /* Achtergrondkleur voor invoervelden in light mode */
+    }
+
+    footer p, footer h2 {
+        color: black; /* Tekstkleur voor footer in light mode */
+    }
+
+    nav a {
+        color: var(--color-text1); /* Kleur voor navigatie links in light mode */
+    }
+}
+
 

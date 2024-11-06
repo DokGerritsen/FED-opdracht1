@@ -1,79 +1,105 @@
+// === Console Test ===
 console.log("hi");
 
 // === Constantes ===
-const hamburger = document.querySelector('#hamburger'); //hamburgericoon
-const inputs = document.querySelectorAll('input[type="text"], input[type="email"]'); //invoervelden
-const form = document.querySelector('form'); //formulier
-const navMenu = document.querySelector('.nav-menu'); //navigatiemenu
+const hamburger = document.querySelector('#hamburger'); // Hamburgericoon
+const navMenu = document.querySelector('.nav-menu'); // Navigatiemenu
+const inputs = document.querySelectorAll('input[type="text"], input[type="email"]'); // Invoervelden
+const form = document.querySelector('form'); // Formulier
+const lightModeToggle = document.getElementById('lightmode-toggle'); //Lightmodeknop
+const video = document.getElementById('clubVideo'); // Achtergrondvideo
+const button = document.getElementById('PausePlayButton'); // pauzeerknop
 
 
-// Functies
-
-// Functie om invoervelden te valideren
-function valideerInput(input) {
-    if (input.value === "") {
-        input.style.backgroundColor = rgb(197, 5, 5) // Maak het veld rood als het leeg is
-    } else {
-        input.style.backgroundColor = 'rgb(96, 96, 96)'; // Maak het veld grijs als er iets is ingevuld
+// === Hamburger Menu Functionaliteit ===
+function toggleMenu() {
+    if (navMenu && hamburger) {
+        navMenu.classList.toggle('show');
+        hamburger.classList.toggle('active');
+        if (navMenu.classList.contains('show')) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
     }
 }
 
-// Functie om invoerveld te stylen bij focus
-function stijlFocusInput(input) {
-    input.style.backgroundColor = 'white'; // Maak het veld wit bij focus
+if (hamburger) {
+    hamburger.addEventListener('click', toggleMenu);
 }
 
-// Functie om het formulier te valideren
+// === Formulier Validatie Functionaliteit ===
+function valideerInput(input) {
+    if (input.value.trim() === "") {
+        input.style.backgroundColor = '#f01f30'; // Maak het veld rood als het leeg is
+    } else {
+        input.style.backgroundColor = 'rgb(211, 211, 211)'; // Herstel kleur als het veld niet leeg is
+    }
+}
+
 function valideerFormulier(event) {
     let formIsValid = true;
-
     inputs.forEach(function(input) {
-        if (input.value.trim() === "") { // Controleer of het veld leeg is
+        if (input.value.trim() === "") {
             input.style.backgroundColor = '#f01f30'; // Maak het veld rood als het leeg is
-            formIsValid = false; // Zet formulier als ongeldig
+            formIsValid = false;
         } else {
-            input.style.backgroundColor = 'rgb(96, 96, 96)'; // Herstel kleur als het veld niet leeg is
+            input.style.backgroundColor = 'rgb(211, 211, 211)';
         }
     });
-
-    // Voorkom dat het formulier verzonden wordt als niet alle velden correct zijn ingevuld
     if (!formIsValid) {
-        event.preventDefault(); // Voorkom de standaard submit-actie
+        event.preventDefault(); // Voorkom verzenden
     } else {
-        console.log("Formulier succesvol ingediend!"); // Succeslog bij indiening
+        console.log("Formulier succesvol ingediend!");
     }
 }
 
-// Functie voor het toggelen van het hamburger menu
-function toggleMenu() {
-    navMenu.classList.toggle('show'); // Toggle de 'show' klasse
-    hamburger.classList.toggle('active'); // Toggle de 'active' klasse voor de hamburger
-
-    // Voeg of verwijder de no-scroll klasse van de body
-    if (navMenu.classList.contains('show')) {
-        document.body.classList.add('no-scroll'); // Voorkom scrollen op de achtergrond
-    } else {
-        document.body.classList.remove('no-scroll'); // Sta scrollen toe als het menu gesloten is
-    }
-}
-
-
-// Event listeners
-
-// Voeg 'blur' en 'focus' event listeners toe aan elk inputveld
 inputs.forEach(function(input) {
     input.addEventListener('blur', function() {
         valideerInput(input);
     });
-
-    input.addEventListener('focus', function() {
-        stijlFocusInput(input);
-    });
 });
 
-// Voeg 'submit' event listener toe aan het formulier
-form.addEventListener('submit', valideerFormulier);
+if (form) {
+    form.addEventListener('submit', valideerFormulier);
+}
 
-// Voeg 'click' event listener toe aan de hamburger om het menu te toggelen
-hamburger.addEventListener('click', toggleMenu);
 
+// === Video Pauzeer/Afspelen Functionaliteit ===
+function togglePlayPause() {
+    if (video && button) {
+        if (video.paused) {
+            video.play();
+            button.textContent = "Pause Video";
+            button.setAttribute("aria-pressed", "true");
+        } else {
+            video.pause();
+            button.textContent = "Play Video";
+            button.setAttribute("aria-pressed", "false");
+        }
+    }
+}
+
+if (button) {
+    button.addEventListener('click', togglePlayPause);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (!lightModeToggle) return;
+
+    const toggleTheme = () => {
+        const isLightMode = document.body.classList.toggle('light-mode');
+        const theme = isLightMode ? 'light' : 'dark';
+        localStorage.setItem('theme', theme);
+        lightModeToggle.textContent = isLightMode ? 'Dark Mode' : 'Light Mode';
+        lightModeToggle.setAttribute('aria-pressed', isLightMode ? 'true' : 'false');
+    };
+
+    lightModeToggle.addEventListener('click', toggleTheme);
+
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-mode');
+        lightModeToggle.textContent = 'Dark Mode';
+        lightModeToggle.setAttribute('aria-pressed', 'true');
+    }
+});

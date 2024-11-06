@@ -11,7 +11,7 @@
 		<a href="index.html">
 			<img src="readme-images/fedbretlogo.png" alt="Bret logo">
 		</a>
-		<button id="hamburger">
+		<button id="hamburger" aria-label="Hamburgermenu">
 			&#9776; <!-- Hamburger icon (3 horizontal lines) -->
 		</button>
 		<nav class="nav-menu" id="nav-menu">
@@ -24,46 +24,49 @@
 
     <main>
         <h1 class="visually-hidden">Reservations</h1>
+
+        <button id="lightmode-toggle" aria-label="Lightmode button">Light Mode</button>
+
         <section class="reservering">
             <h2>GROUP RESERVATIONS</h2>
             <p><span>Welcome to BRET!</span> We are happy to organize your group outing with friends, family, or colleagues. To ensure that the day goes as expected, we kindly ask you to fill in this form. This way we make sure that your day is taken care of down to the last detail</p>
             
+        
+
             <form novalidate>
                 <fieldset>
+
                     <label for="name">Name (First & Last)</label>
-                    <input type="text" id="name" required placeholder="">
+                    <input type="text" id="name" required placeholder="First name Last name*">
         
-                    <label for="email">Email adress</label>
-                    <input type="email" id="email" required placeholder="">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" required placeholder="example@gmail.com*">
         
                     <label for="phone">Phone number</label>
-                    <input type="text" id="phone" required placeholder="">
+                    <input type="text" id="phone" required placeholder="+31 6 12345678*">
         
                     <label for="reservation">When would you like to make a reservation? (Date & Time)</label>
-                    <input type="text" id="reservation" required placeholder="">
+                    <input type="text" id="reservation" required placeholder="November 28th, 18:30*">
         
                     <label for="reason">What is the reason of your visit?</label>
-                    <input type="text" id="reason" required placeholder="">
+                    <input type="text" id="reason" required placeholder="Drinks and dance*">
         
                     <label for="groupSize">What is the group size?</label>
-                    <input type="text" id="groupSize" required placeholder="">
+                    <input type="text" id="groupSize" required placeholder="group of 4*">
         
                     <label for="dinnerType">Would you like to have dinner or drinks and snacks?</label>
-                    <input type="text" id="dinnerType" required placeholder="">
+                    <input type="text" id="dinnerType" required placeholder="drinks and snacks*">
                 </fieldset>
 
                 <button type="submit"> SEND THIS FORM</button>
             </form>
-            
-            
-
         </section>
 
     
     </main>
 
     <footer>
-		<h3>OPENING HOURS</h3>
+		<h2>OPENING HOURS</h2>
 		<p>MON: closed</p>
 		<p>TUE: 12:00-21:00 (drinks only)</p>
 		<p>WED: 12:00-21:00 (dinner and bites)</p>
@@ -92,3 +95,4 @@
 
 </body>
 </html>
+
